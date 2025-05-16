@@ -1,0 +1,17 @@
+# Qleverfile, use with https://github.com/ad-freiburg/qlever-control
+
+[data]
+NAME         = perf
+DESCRIPTION  = TTL with two predicates from DBLP
+
+[index]
+INPUT_FILES      = p1.ttl p2.ttl
+MULTI_INPUT_JSON = { "cmd": "cat ${INPUT_FILES}", "parallel": "true" }
+SETTINGS_JSON    = { "num-triples-per-batch": 1000000 }
+
+[server]
+PORT         = 8888
+ACCESS_TOKEN = perf_eehnN55JdLkT
+
+[runtime]
+SYSTEM = native
